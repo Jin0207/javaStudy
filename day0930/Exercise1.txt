@@ -1,0 +1,12 @@
+Exercise 1
+1. if( 20 <= count && count < 60) count++;
+2. 
+if( x > y) { max = x;
+              min = y;
+            }
+else {
+         max = y;
+         min = x;
+       }
+
+3. if( 1 < x && x < 20) y = x;
