@@ -1,0 +1,16 @@
+
+class  BitTest
+{
+	public static void main(String[] args) 
+	{
+		int a = 10;
+		int b = 20;
+		int i = a & b;
+		int j = a | b;
+		int k = a ^ b;
+
+		System.out.println("i=" + i);
+		System.out.println("j=" + i);
+		System.out.println("k=" + i);
+	}
+}

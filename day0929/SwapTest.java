@@ -1,0 +1,19 @@
+class SwapTest 
+{
+	public static void main(String[] args) 
+	{
+		String cup1 = "Ä¿ÇÇ";
+		String cup2 = "³ìÂ÷";
+
+		System.out.println("ÄÅ1: " + cup1);
+		System.out.println("ÄÅ2: " + cup2);
+		
+		String tmp = cup1;
+		cup1 = cup2;
+		cup2 = tmp;
+
+		System.out.println("µÎ°³ÀÇ ÄÅÀÇ ³»¿ëÀ» ¼­·Î ¹Ù²Ù¾ú½À´Ï´Ù.");
+		System.out.println("ÄÅ1: " + cup1);
+		System.out.println("ÄÅ2: " + cup2);
+	}
+}

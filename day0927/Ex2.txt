@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+class Ex2{
+   public static void main(String []args){
+	Scanner sc = new Scanner(System.in);
+	double x;
+	
+	System.out.println("실수 x의 값을 입력해주세요");
+	x = sc.nextDouble();
+	double answer = 3 * x^3 - 7 * x^2 + 9;
+	System.out.println(answer);
+	
+   }
+}
