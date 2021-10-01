@@ -20,6 +20,6 @@ class StandardWeight
 		else if(weight == standard) result = "표준체중";
 		else result = "과체중";
 		
-		System.out.println( "사용자의 체중은 " + result + "입니다.");
+		System.out.println( "현재 체중은 " + result + "입니다.");
 	}
 }
