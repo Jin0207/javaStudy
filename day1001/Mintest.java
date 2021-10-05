@@ -13,6 +13,28 @@ class  Mintest
 		System.out.print("비교할 세번째 수를 입력하세요: ");
 		c = sc.nextInt();
 		
+		if( a < b && a < c){
+			min = a;
+		}else if(b < a && b < c){
+			min = b;
+		}else{
+			min = c;
+		}
+		/*
+		if(a > b){
+			if(b > c){
+				min = c;
+			}else{
+				min = b;
+			}
+		}else{
+			if(a > c){
+				min = c;
+			}else{
+				min = a;
+			}
+		}*/
+		/*
 		if(a < b){
 			if( a < c){
 				min = a;
@@ -26,7 +48,7 @@ class  Mintest
 			}else{
 				min = c;
 			}
-		}
+		}*/
 		System.out.print("입력하신 3개의 수 중 가장 작은 수는 " + min + "입니다");
 	}
 }

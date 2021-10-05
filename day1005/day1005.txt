@@ -1,0 +1,18 @@
+[break 와 continue]
+
+1_break : switch문이나 반복문에서
+            특정조건을 만족할 때 {}중괄호를 나가는 용도
+            --자신이 속한 반복문을 빠져나온다.
+
+2_continue : 반복문에서만 사용하며
+                특정 조건을 만나면 밑에를 건너뛰고 위로 감
+
+ex)
+for(int i = 1; i <= 10; i++) {
+	if(i % 2 == 0) {
+	      continue;
+	} // 2의 배수를 제외하고 화면 출력
+	System.out.println(i);
+}
+
+            

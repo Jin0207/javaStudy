@@ -7,15 +7,15 @@ class  DiscountTest
 	public static void main(String[] args) 
 	{
 		Scanner sc = new Scanner(System.in);
-		int qty;
-		double tot;
+		int price = 100;
+		int cnt, tot;
 		System.out.print(" 몇 개를 구매하실건가요? :");
-		qty = sc.nextInt();
+		cnt = sc.nextInt();
 		
-		tot = 100.0 * qty;
+		tot = price * cnt;
 		System.out.println( "총 가격: " + tot);
-		if(qty >= 10){
-			tot *= 0.9;
+		if(cnt >= 10){
+			tot = (int)(tot * 0.9); //0.9는 double--실수이기때문에 결과를 형변환
 			System.out.println( "10% 할인 후 지불 가격: " + tot);
 		}
 	}
