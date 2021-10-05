@@ -55,8 +55,9 @@ class  DestinyTest
 			System.out.println("생월: " + destiny[data]);
 			//일
 			for(int i = 1; i < birth_d; i++){
-				if(data == 12){ data = 0; }
 				data ++;
+				if(data == 12){ data = 0; }
+				
 			}
 
 			System.out.println("생일: " + destiny[data]);
@@ -95,10 +96,9 @@ class  DestinyTest
 				data += 11;
 			}
 
-			if( data > 12){
-				data -= 12; //data++되면서 끝나니깐
+			if( data >= 12){
+				data %= 12; 
 			}
-
 			System.out.println("생시: " + destiny[data]);
 		}
 	}

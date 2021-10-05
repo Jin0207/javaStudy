@@ -1,0 +1,32 @@
+class StudentTest  
+{
+	public static void main(String[] args) 
+	{
+		Student sd = new Student("È«±æµ¿", 1, 1, 100, 60, 76);
+		
+		System.out.println("ÀÌ¸§: " + sd.name);
+		System.out.println("ÃÑÁ¡: " + sd.getTotal());
+		System.out.println("Æò±Õ: " + sd.getAverage());
+	}
+}
+class Student
+{
+	String name;
+	int num, ban, kor, eng, math;
+	
+	Student(String name, int ban, int num, int kor, int eng, int math){
+		this.name = name;
+		this.ban = ban;
+		this.num = num;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+	}
+
+	public int getTotal(){
+		return kor+eng+math;
+	}
+	public float getAverage(){
+		return (int)((kor+eng+math) / 3f * 10 + 0.5f) / 10f;
+	}
+}

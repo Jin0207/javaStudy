@@ -20,7 +20,7 @@ class  DestinyTest
 		birth_d = sc.nextInt();
 		System.out.print("태어난 생시를 입력하세요 (ex밤11시30분 = 23.30): ");
 		birth_t = sc.nextDouble();
-		//띠
+
 		if(birth_m < 1 || birth_m > 12 || birth_d < 0 || birth_d > 32 || birth_t < 0.0 || birth_t > 24.0)
 		{
 			System.out.println("입력을 잘못하셨습니다.");
@@ -28,6 +28,7 @@ class  DestinyTest
 		else
 		{
 			System.out.println(name + "님의 사주팔자 결과");
+			//띠 사주팔자
 			switch (animal){
 				case "쥐": data = 0; break;
 				case "소": data = 1; break;
@@ -54,8 +55,9 @@ class  DestinyTest
 			System.out.println("생월: " + destiny[data]);
 			//일
 			for(int i = 1; i < birth_d; i++){
-				if(data == 12){ data = 0; }
 				data ++;
+				if(data == 12){ data = 0; }
+				
 			}
 
 			System.out.println("생일: " + destiny[data]);
@@ -94,8 +96,8 @@ class  DestinyTest
 				data += 11;
 			}
 
-			if( data > 12){
-				data -= 12; //data++되면서 끝나니깐
+			if( data >= 12){
+				data %= 12; 
 			}
 
 			System.out.println("생시: " + destiny[data]);
