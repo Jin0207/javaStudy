@@ -12,11 +12,11 @@ class lab01
 		
 		if(score >= 80){
 			System.out.println("아주 우수하게 합격하였습니다.");
-		}else if(70 <= score && score < 80){
+		}else if(socre >= 70){//80점보다 작으면 이 else if 도달하니깐 70~80미만의범위
 			System.out.println("우수하게 합격하였습니다.");
-		}else if(60 <= score && score < 70){
+		}else if(score >= 60){
 			System.out.println("합격하였습니다.");
-		}else if(50 <= score && score < 60){
+		}else if(score >= 50){
 			System.out.println("안타깝게 불합격하였습니다.");
 		}else{
 			System.out.println("불합격입니다.");

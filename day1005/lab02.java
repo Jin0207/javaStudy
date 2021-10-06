@@ -1,15 +1,18 @@
 //switch문, 문자 하나 읽어서 모음과 비모음 구분하는 프로그램 작성
-import java.util.Scanner;
+//import java.util.Scanner;
+import java.io.IOException;
 class lab02 
 {
-	public static void main(String[] args) 
+	public static void main(String[] args) throws IOException 
 	{
-		Scanner sc = new Scanner(System.in);
 		char ch = '0';
-		String s;
-
+		/*
+		Scanner sc = new Scanner(System.in);
 		System.out.print("문자를 입력하세요: ");
 		ch = sc.next().charAt(0);
+		*/
+		System.out.print("문자를 입력하세요: ");
+		ch = (char) System.in.read();
 
 		switch(ch){
 			case 'a': case 'e': case 'i': case 'o': case 'u':

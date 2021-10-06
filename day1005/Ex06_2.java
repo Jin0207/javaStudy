@@ -5,7 +5,7 @@ class  Ex06_2
 		int sum = 0;
 		for(int i = 10; i <= 30; i++){
 			for(int j = 1; j <= 5; j++){
-				sum = sum + (i * j);
+				sum += (i * j);
 			}
 			
 		}
