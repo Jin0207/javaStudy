@@ -58,6 +58,7 @@ class AirCleaner
 		}
 		return strength[i];
 	}
+
 	void getAirCleaner(){
 		System.out.printf("공기청정기 제조사: %s%n", make);
 		System.out.printf("공기청정기 모델: %s%n", model);

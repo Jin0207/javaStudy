@@ -1,36 +1,37 @@
 class Point
 {
-	int x;
-	int y;
+	private int x;
+	private int y;
+	
 	public int getX(){
 		return x;
 	}
-	public int getY(){
+
+	public int getY(){ //get으로 시작하는 메서드가 접근자
 		return y;
 	}
-	public void setX(int xCoord){
-		System.out.printf("x의 좌표: %d%n", getX());
+
+	public void setX(int xCoord){ //set으로 시작하는 메서드가 설정자
+		x = xCoord;
 	}
+
 	public void setY(int yCoord){
-		System.out.printf("y의 좌표: %d%n", getY());
-		
+		y = yCoord;
 	}
 }
-public class PointTest 
+
+class PointTest 
 {
 	public static void main(String[] args) 
 	{
 		Point p1 = new Point();
-		p1.x = 100;
-		p1.setX(p1.getX());
-		p1.y = 200;
-		p1.setY(p1.getY());
-
-		System.out.println();
+		p1.setX(100);
+		p1.setY(200);
 		Point p2 = new Point();
-		p2.x = 100;
-		p2.setX(p2.getX());
-		p2.y = 300;
-		p2.setY(p2.getY());
+		p2.setX(100);
+		p2.setY(300);
+		
+		System.out.printf("첫번째 객체의 x:%d, y:%d", p1.getX(), p1.getY());
+		System.out.printf("두번째 객체의 x:%d, y:%d", p2.getX(), p2.getY());
 	}
 }

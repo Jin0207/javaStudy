@@ -1,11 +1,11 @@
 class BankAccount
 {
-	double balance; //잔액표시
-	void setDeposit(int amount){ //저금
+	private int balance; //잔액표시
+	public void deposit(int amount){ //저금
 		balance += amount;
-		return;
+		//return;
 	}
-	void setWithdraw(int amount){ //인출
+	public void withdraw(int amount){ //인출
 		if(balance < amount){
 			System.out.printf("현재 잔액이 %.1f 원이므로 %d 원을 인출할 수 없습니다.%n", balance, amount);
 		}
@@ -13,31 +13,43 @@ class BankAccount
 			balance -= amount;
 		}
 	}
-	double getBalance(){
+	public int getBalance(){
 		return balance;
 	}
-	void printBalance(){
-		System.out.println("잔액: " + getBalance());
+	public void printBalance(){
+		System.out.printf("현재잔액: %d%n" , balance);
 	}
-	double addInterest(){
-		double i = balance * 0.075;
-		balance += i;
-		return balance;	
+	public void addInterest(){
+		//balance = balance + balance * 0.075;
+		// balance = balance * 1.075;
+		balance *= 1.075;
 	}
 }
+
 public class BankAccountTest 
 {
 	public static void main(String[] args) 
 	{
 		BankAccount a1 = new BankAccount();
-		a1.balance = 100;
-		a1.setWithdraw(60);
-		a1.printBalance();
-
 		BankAccount a2 = new BankAccount();
-		a2.balance = 50;
-		a2.setWithdraw(80);
+		
+		a1.deposit(100);
+		a2.deposit(50);
+
+		a1.withdraw(60);
+		a2.withdraw(30);
+
+		System.out.println(a1.getBalance());
+		System.out.println(a2.getBalance());
+
+		a1.printBalance();
 		a2.printBalance();
-		System.out.println(a2.addInterest());
+
+		a1.addInterest();
+		a2.addInterest();
+
+		a1.printBalance();
+		a2.printBalance();
+
 	}
 }
