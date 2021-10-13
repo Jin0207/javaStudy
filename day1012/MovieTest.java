@@ -5,12 +5,11 @@ class Movie
 	private String make;
 
 	public String toString(){
-		return "제목: " + title + ", 감독: " + director + ", 제작사: " + make;
+		//return "제목: " + title + ", 감독: " + director + ", 제작사: " + make;
+		return "[title: " + title + ",director: " + director + ", make: " + make + "]";
 	}
 	public Movie(){
-		title = "오징어게임";
-		director = "이순신";
-		make = "쿠키스튜디오";
+		this("오징어게임", "이동욱", "쿠키스튜디오");
 	}
 	public Movie(String title, String director, String make){
 		this.title = title;
