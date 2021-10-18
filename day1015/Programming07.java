@@ -1,14 +1,14 @@
-class Student
-{
-	private String name;
-	private String no;
-	public String major;
-	public String grade;
-	private double credit;
+class Student{
+	protected String name;
+	protected String no;
+	protected String major;
+	protected int grade;
+	protected double credit;
 	//»ý¼ºÀÚ
 	Student(){
 	}
-	Student(String name, String no, String major, String grade, int credit){
+
+	Student(String name, String no, String major, int grade, int credit){
 		this.name = name;
 		this.no = no;
 		this.major = major;
@@ -50,7 +50,7 @@ class UnderGraduate extends Student
 	UnderGraduate(){
 		super();
 	}
-	UnderGraduate(String name, String no, String major, String grade, int credit, String club){
+	UnderGraduate(String name, String no, String major, int grade, int credit, String club){
 		super(name, no, major, grade, credit);
 		this.club = club;
 	}
@@ -63,7 +63,7 @@ class Graduate extends Student
 	Graduate(){
 		super();
 	}
-	Graduate(String name, String no, String major, String grade, int credit, String type, double scholarship){
+	Graduate(String name, String no, String major, int grade, int credit, String type, double scholarship){
 		super(name, no, major, grade, credit);
 		this.type = type;
 		this.scholarship = scholarship;

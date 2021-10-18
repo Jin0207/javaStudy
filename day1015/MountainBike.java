@@ -11,9 +11,9 @@ class Bike
 		return gear;
 	}
 }
-class  MountainBike extends Bike
+public class  MountainBike extends Bike
 {   
-	MountainBike(int g){
+	public MountainBike(int g){
 			super();
 			setGear(g);
 		}
